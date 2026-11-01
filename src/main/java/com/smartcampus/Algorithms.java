@@ -2,7 +2,7 @@ package com.smartcampus;
 
 import java.util.*;
 
-/** Graph algorithms used by the project. */
+
 public final class Algorithms {
     private Algorithms() {}
 
@@ -40,7 +40,7 @@ public final class Algorithms {
         }
     }
 
-    /** Dijkstra: minimum total weight with non-negative edge weights. */
+    
     public static RouteResult dijkstra(CampusGraph graph, String source, String destination) {
         if (source == null || destination == null ||
             !graph.getLocations().contains(source) || !graph.getLocations().contains(destination)) {
@@ -89,7 +89,7 @@ public final class Algorithms {
         return new RouteResult(path, dist.get(destination), true);
     }
 
-    /** BFS: finds a path with the fewest edges, not the lowest weighted distance. */
+    
     public static RouteResult bfs(CampusGraph graph, String source, String destination) {
         if (source == null || destination == null ||
             !graph.getLocations().contains(source) || !graph.getLocations().contains(destination)) {
@@ -143,7 +143,7 @@ public final class Algorithms {
         return 0;
     }
 
-    /** Prim: creates an MST for the component containing the chosen start node. */
+
     public static MstResult prim(CampusGraph graph, String start) {
         List<CampusGraph.Edge> selected = new ArrayList<>();
         if (start == null || !graph.getLocations().contains(start)) {
