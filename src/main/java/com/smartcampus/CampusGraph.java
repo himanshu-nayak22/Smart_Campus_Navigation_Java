@@ -2,10 +2,9 @@ package com.smartcampus;
 
 import java.util.*;
 
-/**
+
  * Stores the undirected, weighted campus graph.
  * Distances are illustrative units, not real campus measurements.
- */
 public class CampusGraph {
     public static final class Edge {
         public final String from;
