@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-/** Draws campus nodes, weighted edges, and a highlighted route or MST. */
+
 public class CampusPanel extends JPanel {
     private final CampusGraph graph;
     private Set<String> highlightedNodes = new HashSet<>();
@@ -71,7 +71,7 @@ public class CampusPanel extends JPanel {
         int offsetX = 25;
         int offsetY = 25;
 
-        // Draw all edges first.
+    
         for (CampusGraph.Edge edge : graph.getEdges()) {
             Point a = scaled(edge.from, sx, sy, offsetX, offsetY);
             Point b = scaled(edge.to, sx, sy, offsetX, offsetY);
@@ -86,7 +86,7 @@ public class CampusPanel extends JPanel {
             g.drawString(String.valueOf(edge.weight), mx + 3, my - 3);
         }
 
-        // Draw nodes and labels.
+    
         for (String location : graph.getLocations()) {
             Point p = scaled(location, sx, sy, offsetX, offsetY);
             boolean active = highlightedNodes.contains(location);
